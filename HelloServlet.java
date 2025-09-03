@@ -1,14 +1,11 @@
-package com.example;
+package com.example.simplewebapp;
 
-import java.io.IOException;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class HelloServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        res.setContentType("text/html");
-        res.getWriter().println("<h1>Hello from GitHub Java Web App!</h1>");
+@SpringBootApplication
+public class SimplewebappApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SimplewebappApplication.class, args);
     }
 }
-
